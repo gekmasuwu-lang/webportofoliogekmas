@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Mesari</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=OneSans:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigasi -->
+    <nav class="navbar">
+        <div class="logo">Mesari.</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#works">Works</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Get In Touch</a></li>
+        </ul>
+    </nav>
+
+    <!-- Section Home -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm <span class="highlight">Mesari</span></h1>
+            <h2>I am a Front End Developer</h2>
+            <p>Membangun pengalaman digital yang indah, responsif, dan mudah digunakan.</p>
+            <a href="#works" class="btn">Lihat Karya Saya</a>
+        </div>
+        <div class="hero-image">
+            <!-- Ganti "profile.jpg" dengan nama file fotomu ya! -->
+            <img src="profile.jpg.jpeg" alt="Foto Mesari" class="profile-photo">
+        </div>
+    </section>
+
+    <!-- Section About -->
+    <section id="about" class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <p>Halo! Saya Mesari, seorang pengembang Front End yang bersemangat menciptakan antarmuka pengguna yang menarik. Saya mengkhususkan diri dalam menerjemahkan desain visual menjadi kode yang bersih dan fungsional. Dengan mata yang tajam terhadap detail dan cinta pada estetika, saya memastikan setiap proyek yang saya sentuh memberikan pengalaman pengguna yang luar biasa.</p>
+        </div>
+    </section>
+
+    <!-- Section Works -->
+    <section id="works" class="container">
+        <h2 class="section-title">My Works</h2>
+        <div class="works-grid">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h3>Project Web Pertama</h3>
+                <p>Hasil desain web portofolio personal.</p>
+            </div>
+            <!-- Project 2 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <h3>Project E-Commerce</h3>
+                <p>Desain UI/UX untuk toko online.</p>
+            </div>
+            <!-- Project 3 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3>Project Aplikasi</h3>
+                <p>Interface untuk aplikasi mobile.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Services -->
+    <section id="services" class="container">
+        <h2 class="section-title">My Services</h2>
+        <div class="services-grid">
+            <!-- Card UI/UX -->
+            <div class="service-card" onclick="openModal('modal-uiux')">
+                <i class="fas fa-pencil-ruler"></i>
+                <h3>UI & UX Design</h3>
+                <p>Klik untuk detail</p>
+            </div>
+            <!-- Card Web Dev -->
+            <div class="service-card" onclick="openModal('modal-webdev')">
+                <i class="fas fa-code"></i>
+                <h3>Web Development</h3>
+                <p>Klik untuk detail</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Get In Touch -->
+    <section id="contact">
+        <h2 class="section-title-contact">Get In Touch</h2>
+        <p class="contact-desc">Do you a new project or job for me? 
+Or Just want to have a chat, feel free to connect.</p>
+        
+        <div class="social-links">
+            <!-- Card Bulet Instagram -->
+            <a href="https://instagram.com/mmezza.catzhy" target="_blank" class="social-btn instagram" data-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <!-- Card Bulet LinkedIn -->
+            <a href="https://linkedin.com/in/ratumasmesari" target="_blank" class="social-btn linkedin" data-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <!-- Card Bulet GitHub -->
+            <a href="https://github.com/usernamekamu" target="_blank" class="social-btn github" data-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Mesari. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Modal Popup UI/UX -->
+    <div id="modal-uiux" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-uiux')">&times;</span>
+            <h2>UI & UX Design</h2>
+            <p>Saya fokus pada pembuatan desain yang user-centric. Proses yang saya lakukan meliputi:</p>
+            <ul>
+                <li>Riset Pengguna</li>
+                <li>Wireframing & Prototyping</li>
+                <li>Desain Visual (Figma/Adobe XD)</li>
+                <li>Usability Testing</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Modal Popup Web Dev -->
+    <div id="modal-webdev" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-webdev')">&times;</span>
+            <h2>Web Development</h2>
+            <p>Saya mengubah desain menjadi kode yang hidup. Keahlian saya meliputi:</p>
+            <ul>
+                <li>HTML5, CSS3, JavaScript (ES6+)</li>
+                <li>Framework (React/Bootstrap/Tailwind)</li>
+                <li>Responsive Design (Mobile First)</li>
+                <li>Optimasi Performa Web</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Link JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
